@@ -1,8 +1,12 @@
 import os
 import requests
-
+import tkinter as tk
+from tkinter import filedialog
 BIN_NAME = "shaheerlab"
-FILE_TO_SEND = ""
+
+# Opens a file selection window
+tk.Tk().withdraw()
+FILE_TO_SEND = filedialog.askopenfilename()
 
 url = f"https://filebin.net/{BIN_NAME}/{os.path.basename(FILE_TO_SEND)}"
 
